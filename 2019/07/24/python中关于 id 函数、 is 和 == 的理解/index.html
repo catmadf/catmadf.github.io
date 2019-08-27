@@ -104,17 +104,17 @@
   };
 </script>
 
-  <meta name="description" content="life is float第一章内容  冬天的心动，别拖至春天。  第二章公式$$a = 1/\sqrt{2}$$http://catmadf.github.io">
+  <meta name="description" content="在编写python程序时，我们经常会用到id() 、is 和 ==，他们之间在某些情况得到的结果相同，有些情况下结果却不同。对id() 、is 和 ==的理解，实际上就是对python内存分配的理解。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my first test blog">
-<meta property="og:url" content="http://yoursite.com/2019/07/23/my first test blog/index.html">
+<meta property="og:title" content="python中关于 id 函数、 is 和 == 的理解">
+<meta property="og:url" content="http://yoursite.com/2019/07/24/python中关于 id 函数、 is 和 == 的理解/index.html">
 <meta property="og:site_name" content="烛影鸾书的博客">
-<meta property="og:description" content="life is float第一章内容  冬天的心动，别拖至春天。  第二章公式$$a = 1/\sqrt{2}$$http://catmadf.github.io">
+<meta property="og:description" content="在编写python程序时，我们经常会用到id() 、is 和 ==，他们之间在某些情况得到的结果相同，有些情况下结果却不同。对id() 、is 和 ==的理解，实际上就是对python内存分配的理解。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-23T12:40:14.990Z">
+<meta property="og:updated_time" content="2019-08-26T02:27:55.514Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my first test blog">
-<meta name="twitter:description" content="life is float第一章内容  冬天的心动，别拖至春天。  第二章公式$$a = 1/\sqrt{2}$$http://catmadf.github.io">
+<meta name="twitter:title" content="python中关于 id 函数、 is 和 == 的理解">
+<meta name="twitter:description" content="在编写python程序时，我们经常会用到id() 、is 和 ==，他们之间在某些情况得到的结果相同，有些情况下结果却不同。对id() 、is 和 ==的理解，实际上就是对python内存分配的理解。">
 
 
 
@@ -124,7 +124,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/23/my first test blog/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/24/python中关于 id 函数、 is 和 == 的理解/">
 
 
 
@@ -135,7 +135,7 @@
 </script>
 
   
-  <title>my first test blog | 烛影鸾书的博客</title>
+  <title>python中关于 id 函数、 is 和 == 的理解 | 烛影鸾书的博客</title>
   
 
 
@@ -327,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/23/my first test blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/24/python中关于 id 函数、 is 和 == 的理解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="烛影鸾书">
@@ -344,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">my first test blog
+          <h1 class="post-title" itemprop="name headline">python中关于 id 函数、 is 和 == 的理解
 
               
             
@@ -370,12 +370,27 @@
                 
               
 
-              <time title="创建时间：2019-07-23 19:30:11" itemprop="dateCreated datePublished" datetime="2019-07-23T19:30:11+08:00">2019-07-23</time>
+              <time title="创建时间：2019-07-24 19:59:20" itemprop="dateCreated datePublished" datetime="2019-07-24T19:59:20+08:00">2019-07-24</time>
             </span>
           
 
           
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -388,8 +403,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/07/23/my first test blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/23/my first test blog/" itemprop="commentCount"></span>
+                <a href="/2019/07/24/python中关于 id 函数、 is 和 == 的理解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/24/python中关于 id 函数、 is 和 == 的理解/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -422,11 +437,58 @@
       
 
       
-        <h1 id="life-is-float"><a href="#life-is-float" class="headerlink" title="life is float"></a>life is float</h1><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
+        <p>在编写python程序时，我们经常会用到<code>id()</code> 、<code>is</code> 和 <code>==</code>，他们之间在某些情况得到的结果相同，有些情况下结果却不同。对<code>id()</code> 、<code>is</code> 和 <code>==</code>的理解，实际上就是对python内存分配的理解。</p>
+<a id="more"></a>
+
+<h1 id="is-和"><a href="#is-和" class="headerlink" title="is 和 =="></a>is 和 ==</h1><p><code>is</code>和<code>==</code>还是比较容易区分理解的。</p>
+<ul>
+<li><code>is</code>运算符判断两个运算对象的标志号是否相同，也就是判断是否引用自同一对象。</li>
+<li><code>==</code>运算符判断两个运算对象的值是否相同。</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>[] <span class="keyword">is</span> []  <span class="comment"># 空列表存放在不同的内存空间中，是两个不同的对象。</span></span><br><span class="line"><span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[] == []  <span class="comment"># 但是它们的值是相同的，都为空。</span></span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="id-和is"><a href="#id-和is" class="headerlink" title="id()和is"></a>id()和is</h1><p>先来看看python docs 里关于<code>id()</code> 和 <code>is</code> 的说明</p>
 <blockquote>
-<p>冬天的心动，别拖至春天。</p>
+<ul>
+<li><p><code>id</code>(<em>object</em>)</p>
+<p>返回对象的“标识值”。该值是一个整数，在此对象的生命周期中保证是唯一且恒定的。两个生命周期不重叠的对象可能具有相同的 <code>id()</code>值。  </p>
+<p><strong>CPython implementation detail:</strong> This is the address of the object in memory.  </p>
+</li>
+<li><p><code>is</code></p>
+<p>运算符 <code>is</code> 和 <code>is not</code> 用于检测对象的标识号：当且仅当 <em>x</em> 和 <em>y</em> 是同一对象时 <code>x is y</code> 为真。 一个对象的标识号可使用 <code>id()</code> 函数来确定。 <code>x is not y</code> 会产生相反的逻辑值。</p>
+</li>
+</ul>
 </blockquote>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>公式<br>$$<br>a = 1/\sqrt{2}<br>$$<br><a href="http://catmadf.github.io" target="_blank" rel="noopener">http://catmadf.github.io</a></p>
+<p><code>id()</code>很好理解了，就是获取一个<strong>标识值</strong>，该值相当于对象在<strong>内存堆</strong>中的<strong>地址</strong>。</p>
+<p><code>is</code>按照官方文档解释好像就相当于<code>id(obj1) == id(obj2)</code>，用来判断<strong>id值</strong>是否相等。多数情况下确实如此，来看看如下例子。</p>
+<hr>
+<p><strong>来运行几行代码测试看看：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MAGIC !</span></span><br><span class="line"><span class="number">1.</span>&gt;&gt;&gt; a = <span class="string">"string"</span></span><br><span class="line">  &gt;&gt;&gt; id(a)</span><br><span class="line">  <span class="number">1343539021560</span></span><br><span class="line"><span class="number">2.</span>&gt;&gt;&gt; id(<span class="string">"str"</span> + <span class="string">"ing"</span>)</span><br><span class="line">  <span class="number">1343539021560</span></span><br><span class="line">  &gt;&gt;&gt; a1 <span class="keyword">is</span> <span class="string">"str"</span>+<span class="string">"ing"</span></span><br><span class="line">  <span class="literal">True</span></span><br><span class="line"><span class="number">3.</span>&gt;&gt;&gt; b1 = <span class="string">"A string"</span></span><br><span class="line">  &gt;&gt;&gt; id(b1)</span><br><span class="line">  <span class="number">1672155110256</span></span><br><span class="line"><span class="number">4.</span>&gt;&gt;&gt; b2 = <span class="string">"A str"</span>+<span class="string">"ing"</span></span><br><span class="line">  &gt;&gt;&gt; id(b2)</span><br><span class="line">  <span class="number">1672154162864</span></span><br><span class="line"><span class="number">5.</span>&gt;&gt;&gt; <span class="string">"A string"</span> <span class="keyword">is</span> <span class="string">"A str"</span>+<span class="string">"ing"</span></span><br><span class="line">  <span class="literal">True</span></span><br><span class="line"><span class="number">6.</span>&gt;&gt;&gt; id(<span class="string">"A string"</span>)</span><br><span class="line">  <span class="number">1675616747440</span></span><br><span class="line"><span class="number">7.</span>&gt;&gt;&gt;id(<span class="string">"A str"</span>+<span class="string">"ing"</span>)</span><br><span class="line">  <span class="number">1675616809072</span></span><br></pre></td></tr></table></figure>
+
+<p>​        运行上述代码会发现一些很奇怪的问题…</p>
+<p>​        这是由于python的官方解释器Cpython的实现里有许多编译优化，其中一个就是<strong>字符串驻留机制(string interning)</strong>。基于这个机制，python在创建一个新的字符串对象时，某些情况下（例如只包含数字、字母和下划线的字符串、长度为0或者1的字符串、编译时）会直接使用已创建的对象，只要它们的值相同即可。这样可以节省内存（节约个屁，总共就省几十个字节的空间），更多的是减少了创建和销毁对象的次数。</p>
+<p>​        所以<code>1</code>和<code>2</code>结果是一样的。对于<code>3</code>和<code>4</code>，字符串中包含有空格，不会触发<strong>string interning</strong>，因此<code>b1</code>和<code>b2</code>指向不同的内存空间。</p>
+<p>​        <code>5</code>运行实际上也触发了字符串驻留机制；再次输出id值，<code>id(&quot;A string&quot;)</code>确实和<code>id(&quot;A str&quot;+&quot;ing&quot;)</code>不一样（其实这样做是没有意义的，再次输出id值验证倒有点偷换概念的样子）。原因如下：在<code>5</code>的表达式运算中，<code>&quot;A str&quot;+&quot;ing&quot;</code>是<strong>编译</strong>（compile）时求值，同样会触发字符串驻留机制，<code>&quot;A str&quot;+&quot;ing&quot;</code>被替换成了<code>A string</code>.</p>
+<p>​        实际上，不仅仅时<strong>string interning</strong>会有这种奇怪的结果，python对于整数存储的优化也会带来这种奇怪的现象。当你启动python程序时，常使用的整数-5到256就已经被预先分配好了内存。当你使用256这个整数时，不过是将一个变量引用指向了已经存在的整型对象(值为256)，不管使用多少个<code>256</code>，它们都指向的是那个预先创建好的对象。如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">256</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="number">256</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = <span class="number">257</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = <span class="number">257</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a <span class="keyword">is</span> b</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(a) == id(b)</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c <span class="keyword">is</span> d</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(c) == id(d)</span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>也就是说，在多数情况下我们可以这样理解：<code>is</code>相当于<code>id(obj1) == id(obj2)</code>，具有判断id值是否相等的作用。</strong></p>
+<p><strong>BUT</strong></p>
+<p><strong><em>需要注意的是，官方文档中还有一句话 “ 两个生命周期不重叠的对象可能具有相同的 <code>id()</code>值。”</em></strong></p>
+<p>就是说就算对象不一样还是会存在<code>id</code>值相同的情况？？？</p>
+<p><strong>再看看下面的代码</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MAGIC AGAIN !</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"> </span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"> </span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">c</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">a = A()</span><br><span class="line">b = B()</span><br><span class="line">c = C()</span><br><span class="line">print(id(a.a))</span><br><span class="line">print(id(a.b))</span><br><span class="line">print(id(b.a))</span><br><span class="line">print(id(b.b))</span><br><span class="line">print(id(c.a))</span><br><span class="line">print(id(c.b))</span><br><span class="line">print(id(c.c))</span><br><span class="line"></span><br><span class="line"><span class="comment">############## console ##############</span></span><br><span class="line"><span class="number">1675615763208</span></span><br><span class="line"><span class="number">1675615763208</span></span><br><span class="line"><span class="number">1675615763208</span></span><br><span class="line"><span class="number">1675616546600</span></span><br><span class="line"><span class="number">1675615763208</span></span><br><span class="line"><span class="number">1675615763208</span></span><br><span class="line"><span class="number">1675616579792</span></span><br></pre></td></tr></table></figure>
+
+<p>​        确实是如此！不管是同一个类还是不同类，抑或是父子类的方法<code>id</code>值都存在一样的情况。</p>
+<p>​        这里先简要提一下python的对象垃圾回收策略：python在创建对象时会同时生成一个数字用来记录对象的引用计数，例如<code>a=&quot;string&quot;</code>语句执行后变量<code>a</code>指向<code>“string”</code>对象,<code>“string”</code>对象的引用计数为1，当再执行<code>a=6</code>后变量<code>a</code>指向<code>6</code>，<code>“string”</code>对象的引用计数就会减1变成0，于是<code>“string”</code>就会被当作垃圾回收掉。</p>
+<p>​        在上述代码中，我们并没有对<code>x.x</code>的方法调用进行引用赋值，它们在各自执行完所在行语句后就被回收掉了，各自生命周期不重叠。至于id值为什么会一样，我们可以理解为固定有那么一块内存，它存放一个类或者方法，用哪个存哪个，用完被垃圾回收掉的就不管了，这块内存继续用来存下一个或某个调用的类或方法。</p>
+<p>大多数情况下<code>is</code>表达式运算确实相当于<code>id(obj1) == id(obj2)</code>，但是这其中还有一点限制需要注意，如果没注意到这个限制，那么<code>is</code>可能给你意想不到的结果。这个限制就是<code>is</code>判断的两个对象的生命周期是有重叠部分的。看看如下代码（接上一个代码块）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MAGIC AGAIN !</span></span><br><span class="line">print(id(a.a)==id(a.b)==id(b.a)==id(c.a))</span><br><span class="line">print(a.a <span class="keyword">is</span> a.b)</span><br><span class="line"></span><br><span class="line"><span class="comment">############## console ##############</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+<p>​        一步一步来解释这两行代码：</p>
+<p>​        首先第一行是一个表达式的计算，按照从左到右、从内到外并遵从运算优先级（这里没有其他运算符，不用考虑优先级）的顺序，先调用<code>a.a</code>，传给<code>id</code>，最后得到一个整数，由于<code>a.a</code>的引用计数为0，所以原先存<code>a.a</code>的内存腾出来可以用在其他地方；再计算<code>id(a.b)</code>得到一个整数（a.b很可能存放在之前a.a存放的内存空间中），并且也触发了垃圾回收，下略。由于都存放在同一内存空间中，这些整数都相同，最后结果自然为<code>True</code></p>
+<p>​        第二行代码表达式从左到右求值，我们可以理解为调用<code>a.a</code>放在内存某个空间中并用一个临时变量<code>tmp1</code>（如此假设而已）指向它，调用<code>a.b</code>放在内存某个空间中并用一个临时变量<code>tmp2</code>指向它，这个步骤决定<code>is</code>接收的两个对象生命周期存在重叠部分，既然生命周期存在重叠部分并且单元内存又不能同时存放两个对象，那么<code>is</code>运算时两个对象都在不同内存中，结果自然是<code>False</code>。</p>
 
       
     </div>
@@ -491,8 +553,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/23/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/07/23/my first test blog/" rel="next" title="my first test blog">
+                <i class="fa fa-chevron-left"></i> my first test blog
               </a>
             
           </div>
@@ -500,10 +562,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/24/python中关于 id 函数、 is 和 == 的理解/" rel="prev" title="python中关于 id 函数、 is 和 == 的理解">
-                python中关于 id 函数、 is 和 == 的理解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -690,7 +748,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#life-is-float"><span class="nav-number">1.</span> <span class="nav-text">life is float</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章"><span class="nav-number">1.1.</span> <span class="nav-text">第一章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章"><span class="nav-number">1.2.</span> <span class="nav-text">第二章</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#is-和"><span class="nav-number">1.</span> <span class="nav-text">is 和 ==</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#id-和is"><span class="nav-number">2.</span> <span class="nav-text">id()和is</span></a></li></ol></div>
             
 
           </div>
